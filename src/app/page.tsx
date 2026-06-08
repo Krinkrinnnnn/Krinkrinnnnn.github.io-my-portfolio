@@ -55,6 +55,7 @@ import {
   AnimatedOrb,
   ScaleIn,
 } from "@/components/animations";
+import profilePic from "../../public/profile.png";
 
 const skills = [
   { name: "Python (PyTorch / TensorFlow)", level: 95 },
@@ -269,7 +270,7 @@ function FloatingProfileIcon() {
           }}
         />
         <Avatar
-          src="/profile.png"
+          src={profilePic.src}
           alt="William Chung"
           sx={{
             width: 56,
@@ -321,7 +322,7 @@ export default function Home() {
               <FloatingElement amplitude={8} duration={4}>
                 <ScaleIn>
                   <Avatar
-                    src="/profile.png"
+                    src={profilePic.src}
                     alt="William Chung"
                     sx={{
                       width: 180,
@@ -330,6 +331,7 @@ export default function Home() {
                       border: "4px solid rgba(255,255,255,0.3)",
                       backdropFilter: "blur(10px)",
                       boxShadow: "0 20px 60px rgba(0,0,0,0.3)",
+                      objectFit: "cover",
                     }}
                   />
                 </ScaleIn>
